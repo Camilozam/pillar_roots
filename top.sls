@@ -1,4 +1,4 @@
 base:
   '*':
     - salt
-    - network_data
+    - dos2unix

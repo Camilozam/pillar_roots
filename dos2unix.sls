@@ -1,2 +1,2 @@
 dos2unix:
-  version: 7.0
+  version: 7.4.0-2

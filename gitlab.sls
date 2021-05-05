@@ -5,6 +5,12 @@ gitlab:
   config: |
     # Configure Gitlab to use SSL
     #external_url 'https://gitlab.example.com'
+    nginx['enable'] = false
+    web_server['external_users'] = [www-data]
+    gitlab_rails['trusted_proxies'] = [192.168.10.204]
+    gitlab_workhorse['listen_network'] = tcp
+    gitlab_workhorse['listen_addr'] = 127.0.0.1:8181
+    unicorn['port'] = 8082
 
     #letsencrypt['enable'] = true
     #letsencrypt['contact_emails'] = ['hostmaster@example.com']
